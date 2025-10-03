@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Studenti</title>
+</head>
+<body>
+    <h1>Lista de Studenti</h1>
+    <ul>
+        {% for student in studenti %}
+            <li>
+                <a href="{% url 'cursuri_student' student.id %}">
+                    {{ student.nume }} - {{ student.prenume }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
